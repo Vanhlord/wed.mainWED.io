@@ -1,0 +1,373 @@
+/* =========================================
+ 🌿 HOME.CSS — BẢN XỊN XÒ HOÀN CHỈNH NHẤT
+ ========================================= */
+
+/* ----- Thông tin server ----- */
+.server-info {
+  background: #ffffffaa;
+  border: 2px solid #e5f7cc;
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(225, 255, 196, 0.2);
+  margin-bottom: 30px;
+}
+
+/* ----- Quy tắc / Luật chơi ----- */
+.rules-section {
+  background-color: #fef9e7;
+  border: 1px solid #c6e48b;
+  border-radius: 15px;
+  padding: 25px;
+  margin-top: 30px;
+  box-shadow: 0 5px 15px rgba(198, 228, 139, 0.4);
+  text-align: left;
+}
+
+.rules-section h2 {
+  color: #82cf2a;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.rules-section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #555;
+}
+
+.rules-section ul li {
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+/* ----- Trạng thái server ----- */
+.server-status { display: flex; justify-content: center; align-items: center; gap: 8px; margin-bottom: 15px; } 
+.dot { width: 14px; height: 14px; border-radius: 50%; margin-right: 8px; vertical-align: middle; transition: background 0.3s ease; } 
+.online { background-color: #22c55e; animation: pulseGreen 3s infinite ease-in-out; } 
+.offline { background-color: #ef4444; animation: pulseRed 3s infinite ease-in-out; }
+
+/* 🟢 Hiệu ứng nhịp tim khi online */
+@keyframes pulseGreen {
+  0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+  70% { box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+}
+
+/* 🔴 Hiệu ứng nhịp tim khi offline */
+@keyframes pulseRed {
+  0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+  70% { box-shadow: 0 0 0 8px rgba(239, 68, 68, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+
+/* ----- IP + Người chơi ----- */
+.ip-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: #fafff4;
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: 1px solid #dcfce7;
+  margin: 15px 0;
+}
+
+.player-count {
+  margin: 15px 0;
+  font-size: 1.1rem;
+  color: #90cf3c;
+}
+
+#copyBtn {
+  font-size: 1.1rem;        /* chữ to hơn */
+  padding: 12px 80px;       /* nút to hơn */
+  border-radius: 10px;      /* bo góc mềm hơn */
+  background: #24b147;      /* màu nền nhẹ */
+  border: 2px solid #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#copyBtn:hover {
+  background: #b3f0b3;
+  transform: scale(1.05);   /* hiệu ứng phồng nhẹ khi rê chuột */
+}
+/* 🌿 Tùy chỉnh riêng cho mobile */
+@media (max-width: 768px) {
+  #copyBtn {
+    font-size: 1rem;        /* chữ nhỏ lại một chút */
+    padding: 10px 88px;     /* thu chiều ngang lại cho vừa màn */
+    border-radius: 8px;
+  }
+}
+/* ----- Nút "CHƠI NGAY" ----- */
+.join-btn {
+  display: inline-block;
+  background-color: #4ade80;
+  color: #14532d;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 15px 40px;
+  border-radius: 12px;
+  border: 2px solid #166534;
+  box-shadow: 0 4px 10px rgba(74, 222, 128, 0.4),
+              0 1px 2px rgba(0,0,0,0.1);
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  margin-top: 20px;
+}
+
+.join-btn:hover {
+  background-color: #22c55e;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(34, 197, 94, 0.5);
+}
+
+.join-btn:active {
+  transform: scale(0.97);
+  box-shadow: 0 3px 6px rgba(34, 197, 94, 0.3);
+}
+
+/* ----- Extra / Thông tin phụ ----- */
+.extra {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 20px rgba(177, 238, 127, 0.25);
+  border: 2px solid #fef9c3;
+}
+
+.extra h2 {
+  color: #82cf2a;
+  margin-bottom: 15px;
+}
+
+.extra ul {
+  list-style: none;
+  text-align: left;
+}
+
+.extra li {
+  background: #ecfccb;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.extra li:hover {
+  background: #d9f99d;
+  transform: translateX(5px);
+}
+
+/* ----- Header Background ----- */
+.header-bg {
+  position: relative;
+  padding: 60px 20px;
+  color: white;
+  border-radius: 20px;
+  margin: 30px auto;
+  overflow: hidden;
+  max-width: 1100px;
+  min-height: 250px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.header-bg .header-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* để video phủ đầy container */
+  z-index: 0;
+}
+
+.header-bg .header-content {
+  position: relative;
+  z-index: 1; /* để nội dung hiện trên video */
+}
+
+
+.header-bg::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background: rgba(0, 0, 0, 0.1); /* màu nền trong suốt */
+  border-radius: inherit;
+  z-index: 1;
+}
+
+.header-bg h1, .header-bg .subtitle {
+  position: relative;
+  z-index: 2;
+}
+
+.header-bg h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  color: #fffbea;
+}
+
+.header-bg .subtitle {
+  color: #f1f5f9;
+}
+
+/* ----- Responsive ----- */
+@media (max-width: 768px) {
+  .header-bg {
+    padding: 40px 15px;
+    margin: 20px 0;
+    border-radius: 15px;
+    min-height: 200px;
+  }
+
+  .header-bg h1 {
+    font-size: 2rem;
+  }
+
+  .header-bg .subtitle {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .server-info {
+    padding: 20px 15px;
+    margin-bottom: 25px;
+  }
+
+  .server-status {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .ip-box {
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px;
+  }
+
+  #serverIP {
+    font-size: 1.1rem;
+  }
+
+  .player-count {
+    font-size: 1.1rem;
+  }
+
+  .join-btn {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 12px 20px;
+  }
+
+  .extra {
+    padding: 20px 15px;
+  }
+
+  .extra ul {
+    padding-left: 0;
+  }
+
+  .extra li {
+    padding: 12px 15px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-bg h1 {
+    font-size: 1.6rem;
+  }
+
+  .join-btn {
+    font-size: 1rem;
+    padding: 10px 15px;
+  }
+}
+/* phần khung chữ thay  đổi 10s */
+.server-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.actions-left {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tip-box {
+  background: #ffffff;
+  border: 2px solid #d3f9d8;
+  border-radius: 15px;
+  padding: 15px 25px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+  width: 297px; /* cố định chiều rộng */
+  height: 100px; /* cố định chiều cao */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* nếu chữ dài quá sẽ không phá layout */
+}
+
+.server-tip {
+  font-size: 1rem;
+  color: #000000;
+  transition: opacity 1s ease, transform 1s ease;
+  opacity: 1;
+  line-height: 1.4;
+}
+.server-ti {
+  font-size: 1rem;
+  color: #efffd5;
+  transition: opacity 1s ease, transform 1s ease;
+  opacity: 1;
+  line-height: 1.4;
+}
+
+.fade-out {
+  opacity: 0;
+  transform: translateY(10px);
+}
+/* dòng thời gian ở server info */
+.server-time {
+  text-align: center;
+  margin: 15px 0;
+  font-size: 1.1em;
+  color: #54d684;
+  background: rgba(34, 197, 94, 0.1);
+  padding: 8px 15px;
+  border-radius: 10px;
+  display: inline-block;
+  box-shadow: 0 0 10px rgba(34, 197, 94, 0.3);
+}
+
+  #block-msg {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: #000000cc;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    padding-top: 40vh;
+    z-index: 9999;
+  }

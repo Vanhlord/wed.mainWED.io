@@ -1,0 +1,185 @@
+/* --------------------
+   ABOUT PAGE
+   Theme: White + Soft Yellow + Green
+   Author: Nova 💚
+-------------------- */
+
+.about-section {
+  padding: 80px 10%;
+  background: linear-gradient(180deg, #fffdf6 0%, #f9ffe9 100%);
+  text-align: center;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.about-section h1 {
+  color: var(--primary-green);
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 0 #e0e0e0;
+}
+
+.about-section p {
+  color: #444;
+  font-size: 1.05rem;
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  line-height: 1.8;
+}
+
+/* Cards giới thiệu */
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.about-card {
+  background: var(--bg-white);
+  border-radius: 18px;
+  box-shadow: var(--shadow-soft);
+  padding: 25px 20px;
+  transition: var(--transition);
+  border: 2px solid transparent;
+}
+
+.about-card:hover {
+  border-color: var(--primary-green);
+  transform: translateY(-8px);
+}
+
+.about-card h3 {
+  color: var(--dark-green);
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+
+.about-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Team Section */
+.team-section {
+  margin-top: 80px;
+  background: var(--light-green);
+  padding: 70px 10%;
+  border-radius: 20px;
+  box-shadow: var(--shadow-soft);
+}
+
+.team-section h2 {
+  font-size: 1.8rem;
+  color: var(--dark-green);
+  margin-bottom: 30px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-member {
+  background: var(--bg-white);
+  border-radius: 16px;
+  box-shadow: var(--shadow-soft);
+  padding: 20px;
+  transition: var(--transition);
+}
+
+.team-member:hover {
+  transform: translateY(-6px);
+}
+
+.team-member img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary-green);
+  margin-bottom: 10px;
+}
+
+.team-member h4 {
+  color: var(--primary-green);
+  margin-bottom: 6px;
+  font-size: 1.1rem;
+}
+
+.team-member span {
+  display: block;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== MEDIA QUERY CHO MOBILE (dưới 768px) ===== */
+@media (max-width: 768px) {
+.about-section {
+  padding: 50px 5%;
+}
+
+.about-section h1 {
+  font-size: 1.9rem;
+}
+
+.about-section p {
+  font-size: 1rem;
+  line-height: 1.7;
+  text-align: left; /* Căn lề trái cho dễ đọc */
+}
+
+.about-cards {
+  gap: 20px;
+}
+
+.about-card {
+  padding: 20px 15px;
+}
+
+.team-section {
+  margin-top: 60px;
+  padding: 50px 5%;
+}
+
+.team-section h2 {
+  font-size: 1.6rem;
+}
+
+.team-grid {
+  /* Thiết lập 2 cột trên màn hình nhỏ hơn, 1 cột trên màn hình rất nhỏ */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.team-member {
+  padding: 15px;
+  text-align: center; /* Căn giữa nội dung trong thẻ thành viên */
+}
+
+.team-member img {
+  width: 80px;
+  height: 80px;
+}
+}
+
+@media (max-width: 480px) {
+/* Trên màn hình rất nhỏ, đảm bảo grid team chỉ có 1 cột */
+.team-grid {
+  grid-template-columns: 1fr;
+}
+}

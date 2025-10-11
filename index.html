@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Máy Chủ MCPE 🍃</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/scrolling-text.css">
+  <link rel="stylesheet" href="css/anhnen.css">
+  <link rel="stylesheet" href="css/image-gallery.css">
+  <link rel="stylesheet" herf="css/coppybutton.css">
+  <link rel="stylesheet" herf="css/box.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<header class="main-header">
+  <div class="logo">
+    <img src="assets/images/logo.png" alt="Logo">
+    <h1>Home 🍃</h1>
+  </div>
+  <div class="hamburger" id="hamburger">&#9776;</div>
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="active">Trang chủ</a>
+    <a href="shop.html">Đóng góp</a>
+    <a href="about.html">Giới thiệu</a>
+    <a href="contact.html">Liên hệ</a>
+  </nav>
+</header>
+
+<!-- Dòng chữ chạy ngang -->
+<div class="scrolling-text">
+  <span>🌟 Website đang trong quá trình hoàn thiện – cảm ơn bạn đã đồng hành cùng mình nhé! 🚀</span>
+</div>
+
+<body>
+  <div class="container">
+    <header class="header-bg">
+      <!-- Video nền -->
+      <video autoplay muted loop playsinline class="header-video">
+        <source src="https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/videos/Homepage_Ambient-Hero-A_FGD-25_1800x1080.webm" type="video/webm">
+        Trình duyệt không hỗ trợ video.
+      </video>
+  
+      <!-- Nội dung header -->
+      <div class="header-content">
+        <h1>VanhMCPE</h1>
+        <p class="subtitle">Nơi chill cùng bạn bè — rèn luyện sự điềm tĩnh của bạn 😎</p>
+      
+        <p class="server-ti" id="serverTip">
+        Nếu server chưa mở mà cậu đang chán thì có thể ấn nút tham gia chơi trước nhé!
+          </p>
+        </div>
+    </header>
+    <!-- MAIN CONTENT -->
+    <div class="server-info">
+      <div class="server-status">
+        <span id="statusDot" class="dot offline"></span>
+        <span id="serverStatus">Máy chủ đang trong thời gian ngủ</span>
+      </div>
+      <!-- ⏰ Thời gian thực -->
+    <div class="server-time">
+        <span>TG: </span>
+        <span id="currentTime">--:--:--</span>
+      </div>
+    
+  <div class="server-details">
+    <div><strong>Phiên bản:</strong> <span id="serverVersion">1.22</span></div>
+    <div><strong>Loại:</strong> <span id="serverType">Bình thường</span></div>
+    <div><strong>IP Máy Chủ:</strong> <span id="serverIP">---.---.--.---</span></div>
+    <div><strong>Port:</strong> <span id="serverPort">-----</span></div>
+    <div><strong>Online:</strong> <span id="playerCount">0</span> người</div>
+  </div>
+
+  <div class="server-actions">
+    <div class="actions-left">
+      <button id="copyBtn">📋 Sao chép IP</button>
+      <button class="join-btn" onclick="window.location.href='minecraft://'">🚀 Tham gia ngay</button>
+    </div>
+  </div>
+      <div class="tip-box">
+    <p class="server-tip" id="serverTip">
+    Nếu server chưa mở mà cậu đang chán thì có thể ấn nút vào game chơi trước nhé!
+      </p>
+    </div>
+    </div>
+
+      <div class="extra">
+        <h2>🎮 Tính năng nổi bật</h2>
+        <ul>
+          <li>🌱 Giao diện nhẹ – thân thiện – load cực nhanh</li>
+          <li>⚡ Cập nhật tự động trạng thái máy chủ</li>
+          <li>🔔 Thông báo real-time khi bạn bè online</li>
+        </ul>
+      </div>
+
+      <section class="rules-section">
+        <h2>📜 Luật chơi</h2>
+        <ul>
+          <li>Không sử dụng phần mềm gian lận hoặc hack.</li>
+          <li>Tôn trọng người chơi khác, không gây war hoặc phá hoại.</li>
+          <li>Không spam chat hoặc quảng cáo không đúng nơi quy định.</li>
+          <li>Tuân thủ các quy định của máy chủ để đảm bảo môi trường chơi lành mạnh.</li>
+          <li>Quyết định của ban quản trị là cuối cùng.</li>
+        </ul>
+      </section>
+      <!-- Phần tải Minecraft -->
+<section class="download-section">
+  <h2>⬇️ Tải Minecraft</h2>
+  <p class="server-tip">
+    Các phiên bản mới nhất sẽ luôn được cập nhật!<br>
+    Cập nhật 1.21.111 mới nhất 
+  </p>
+  <p class="server-tip note">Do ad không dùng iPhone nên nông cạn, mong ae thông cảm 😅</p>
+  
+  <div class="download-buttons">
+    <a href="https://www.mediafire.com/file/5m66z5808p3ow9r/patch_1.21.111_arm32_arm64_mlb2.apk/file" target="_blank">📱 Minecraft 1.21.111 Patched</a>
+    <a href="https://download.nestvui.com/BANDISHARE/GAME/MCPE/Minecraft_PE_1.21.111_BANDISHARE.apk" target="_blank">📱 Minecraft 1.21.111</a>
+    <a href="https://download.nestvui.com/BANDISHARE/GAME/MCPE/Minecraft_PE_1.21.101_BANDISHARE.apk" target="_blank">🎮 Minecraft PE 1.21.101</a>
+    <a href="https://www.mediafire.com/file/og7csk0pcx29ho9/Minecraft_Patch_121101_Arm64_32_Music_(Safefileku).apk/file?dkey=itmp8knq3dz&r=1053" target="_blank">📱 Patched 1.21.101</a>
+  </div>
+</section>
+      
+      <section class="image-gallery">
+        <h2>📷 Hình ảnh nổi bật</h2>
+        <div class="image-grid">
+          <img src="assets/images/1.png" alt="Ảnh 1">
+          <img src="assets/images/2.png" alt="Ảnh 2">
+          <img src="assets/images/3.png" alt="Ảnh 3">
+          <img src="assets/images/4.png" alt="Ảnh 4">
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>✨ Tạo bởi <strong>Vanh Lord</strong> </p>
+    </footer>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/serverapi.js"></script>
+</body>
+</html>

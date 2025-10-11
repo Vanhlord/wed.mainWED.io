@@ -1,0 +1,6 @@
+- [x] Sửa đường dẫn CSS trong shop.html từ "style.css" thành "css/style.css"
+- [x] Sửa đường dẫn CSS trong leaderboard.html từ "style.css" thành "css/style.css"
+- [x] Sửa đường dẫn CSS trong contact.html từ "style.css" thành "css/style.css"
+- [x] Thêm chức năng sao chép IP máy chủ vào nút "Sao chép" trong index.html
+- [x] Test bằng cách mở shop.html trong trình duyệt để kiểm tra CSS có hiện không
+- [x] Test nút sao chép IP trong index.html

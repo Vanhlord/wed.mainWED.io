@@ -1,0 +1,142 @@
+.violations-container {
+    text-align: center;
+    padding: 40px 20px;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .violations-container h1 {
+    color: #d32f2f;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+  }
+  
+  .violations-container p {
+    color: #444;
+    margin-bottom: 25px;
+    font-size: 1rem;
+  }
+  
+  .table-wrapper {
+    overflow-x: auto;
+  }
+  
+  .violations-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    font-size: 0.95rem;
+  }
+  
+  .violations-table th,
+  .violations-table td {
+    padding: 14px 10px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+    white-space: nowrap;
+  }
+  
+  .violations-table th {
+    background: #fef2f2;
+    color: #b71c1c;
+    font-weight: 600;
+  }
+  
+  .violations-table tr:hover {
+    background: #fff8f8;
+  }
+  
+  .player {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .player img {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .ban td {
+    background: #ffebee;
+    color: #c62828;
+  }
+  
+  .warn td {
+    background: #fffde7;
+    color: #f9a825;
+  }
+  
+  .mute td {
+    background: #e3f2fd;
+    color: #1565c0;
+  }
+  
+  .note {
+    margin-top: 20px;
+    color: #555;
+    font-style: italic;
+    font-size: 0.9rem;
+  }
+  
+  /* 🌿 RESPONSIVE — tối ưu cho điện thoại */
+  @media (max-width: 768px) {
+    .violations-container {
+      padding: 20px 10px;
+    }
+  
+    .violations-container h1 {
+      font-size: 1.5rem;
+    }
+  
+    .violations-container p {
+      font-size: 0.9rem;
+    }
+  
+    .violations-table {
+      font-size: 0.85rem;
+    }
+  
+    .violations-table th,
+    .violations-table td {
+      padding: 10px 6px;
+    }
+  
+    .player span {
+      display: none; /* Ẩn tên nếu quá nhỏ, chỉ hiện avatar */
+    }
+  
+    .player img {
+      width: 28px;
+      height: 28px;
+    }
+  }
+  
+  /* 🌿 Dành cho màn hình siêu nhỏ (dưới 480px) */
+  @media (max-width: 480px) {
+    .violations-container h1 {
+      font-size: 1.3rem;
+    }
+  
+    .violations-table {
+      font-size: 0.8rem;
+    }
+  
+    .violations-table th:nth-child(3),
+    .violations-table td:nth-child(3) {
+      display: none; /* Ẩn cột “Lý do” nếu không đủ chỗ */
+    }
+  
+    .violations-table th:nth-child(5),
+    .violations-table td:nth-child(5) {
+      display: none; /* Ẩn cột “Thời gian” để bảng không tràn */
+    }
+  
+    .note {
+      font-size: 0.8rem;
+    }
+  }
+  

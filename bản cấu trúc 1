@@ -1,0 +1,39 @@
+minecraft-server-website/
+│
+├── index.html              → Trang chủ
+├── about.html              → Giới thiệu server
+├── shop.html               → Cửa hàng / Nạp thẻ / Mua rank
+├── leaderboard.html        → Bảng xếp hạng
+├── contact.html            → Liên hệ / Hỗ trợ
+│
+├── /assets/
+│   ├── /images/            → Logo, banner, hình server, icon rank...
+│   ├── /videos/            → Trailer server (nếu có)
+│   ├── /fonts/             → Font Minecraft hoặc pixel style
+│   └── /sounds/            → Nhạc nền, hiệu ứng click
+│
+├── /css/
+│   ├── style.css           → Giao diện chính
+│   └── responsive.css      → Điều chỉnh cho điện thoại/tablet
+│
+├── /js/
+│   ├── main.js             → Hiệu ứng chung (menu, popup, animation)
+│   ├── server-status.js    → Code hiển thị người chơi online
+│   ├── shop.js             → Code xử lý cửa hàng / thanh toán
+│   └── leaderboard.js      → Lấy dữ liệu top player từ API
+│
+└── /api/
+    ├── players.json        → Dữ liệu người chơi (nếu tạm lưu)
+    ├── shop.php            → API giao dịch (nếu dùng backend PHP)
+    └── status.php          → API lấy thông tin server (ping, TPS,...)
+
+
+/assets/css/
+ ├── base.css          ← chứa BASE STYLES (font, màu nền, reset)
+ ├── header.css        ← chứa HEADER
+ ├── home.css          ← chứa HERO + FEATURES + STATUS
+ ├── about.css         ← chứa ABOUT PAGE
+ ├── shop.css          ← chứa SHOP PAGE
+ ├── leaderboard.css   ← chứa LEADERBOARD PAGE
+ ├── contact.css       ← chứa CONTACT PAGE
+ └── footer.css        ← chứa FOOTER
