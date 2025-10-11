@@ -1,18 +1,21 @@
-// lấy danh sách món
+
+// lấy danh sách món từ /api/shop
 fetch('/api/shop')
   .then(res => res.json())
-  .then(data => {
+  .then(items => {
     const shopList = document.getElementById('shop-list');
-    data.forEach(item => {
+    items.forEach(item => {
       const li = document.createElement('li');
       li.innerText = `${item.name} - ${item.price} coins`;
+      li.style.cursor = 'pointer';
       li.addEventListener('click', () => buyItem(item.id));
       shopList.appendChild(li);
     });
   });
 
+// xử lý mua
 function buyItem(id) {
-  const username = "Player1"; // demo
+  const username = prompt("Nhập tên người chơi:"); // demo
   fetch('/api/shop', {
     method: 'POST',
     headers: { "Content-Type": "application/json" },
