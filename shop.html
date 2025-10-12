@@ -1,31 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>Shop Minecraft Server</title>
-  <link rel="stylesheet" href="/css/shop.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Vật Phẩm</title>
+  <link rel="stylesheet" href="shop.css">
 </head>
 <body>
-  <h1>Server Shop</h1>
-  
-  <ul id="shop-list">
-    <!-- Danh sách item sẽ load từ API -->
-  </ul>
-  <ul id="shop-list">
-  <li>
-    <img src="/assets/images/sword.png" alt="Diamond Sword">
-    <div class="item-name">Diamond Sword</div>
-    <div class="item-price">150 coins</div>
-    <a href="#" class="buy-button">Buy Now</a>
-  </li>
+  <div class="container">
+    <header>
+      <h1>⚔️ SHOP VẬT PHẨM HUYỀN THOẠI ⚔️</h1>
+      <button class="home-btn" onclick="window.location.href='index.html'">🏠 Trở về trang chủ</button>
+    </header>
 
-  <li>
-    <img src="/assets/images/armor.png" alt="Netherite Armor">
-    <div class="item-name">Netherite Armor</div>
-    <div class="item-price">400 coins</div>
-    <a href="#" class="buy-button">Buy Now</a>
-  </li>
-</ul>
+    <div class="shop-items">
+      <div class="item">
+        <img src="https://cdn-icons-png.flaticon.com/512/2947/2947987.png" alt="Kiếm ánh sáng">
+        <h2>Kiếm Ánh Sáng</h2>
+        <p>+100 sức mạnh, ánh lên hào quang của huyền thoại.</p>
+        <button class="buy-btn">Mua 500 vàng</button>
+      </div>
+
+      <div class="item">
+        <img src="https://cdn-icons-png.flaticon.com/512/1829/1829586.png" alt="Khiên Rồng">
+        <h2>Khiên Rồng</h2>
+        <p>+80 phòng thủ, bảo vệ bạn khỏi mọi đòn tấn công.</p>
+        <button class="buy-btn">Mua 400 vàng</button>
+      </div>
+
+      <div class="item">
+        <img src="https://cdn-icons-png.flaticon.com/512/1077/1077976.png" alt="Nhẫn Phép">
+        <h2>Nhẫn Phép</h2>
+        <p>+50 mana, tăng khả năng dùng kỹ năng đặc biệt.</p>
+        <button class="buy-btn">Mua 300 vàng</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll('.buy-btn');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        alert('💰 Giao dịch thành công! Vật phẩm đã thêm vào túi đồ!');
+      });
+    });
+  </script>
+</body>
+</html>
+
 
 
   <script src="/js/shop.js"></script>
