@@ -108,4 +108,29 @@ p {
   box-shadow: 0 0 20px #ff00ff;
 }
 
+/* 📱 Responsive cho điện thoại */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.6rem;
+    line-height: 1.4;
+  }
 
+  .home-btn {
+    position: static;
+    display: block;
+    margin: 15px auto;
+    width: 90%;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .shop-items {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .item {
+    width: 85%;
+  }
+}
