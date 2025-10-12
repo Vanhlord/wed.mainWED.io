@@ -1,73 +1,128 @@
-/* ========== SHOP PAGE STYLING ========== */
+/* ========== MODERN MINECRAFT SHOP ========== */
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 body {
-  font-family: 'Minecraftia', monospace;
-  background: url('/assets/images/shop-bg.jpg') center/cover no-repeat;
+  font-family: 'Press Start 2P', cursive;
+  background: linear-gradient(135deg, #0a0a0a, #1b1b1b);
   color: #f2f2f2;
   margin: 0;
   padding: 0;
-  text-align: center;
   min-height: 100vh;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/* HEADER */
 h1 {
-  font-size: 2.8rem;
+  font-size: 2.2rem;
   margin-top: 60px;
-  text-shadow: 2px 2px 0 #222;
-  color: #fff34f;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
+  background: linear-gradient(90deg, #ffd54f, #ff7a00, #ff4fa3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 12px #ffb30077;
 }
 
-/* Danh sách item */
+/* CONTAINER GRID */
 #shop-list {
-  margin-top: 40px;
-  list-style: none;
-  padding: 0;
+  margin: 60px auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 40px;
   width: 80%;
-  max-width: 1000px;
+  max-width: 1200px;
 }
 
-/* Từng item */
+/* SHOP ITEM CARD */
 #shop-list li {
-  background: rgba(30, 30, 30, 0.85);
-  border: 2px solid #555;
-  border-radius: 10px;
+  background: linear-gradient(180deg, #1e1e1e, #101010);
+  border: 2px solid #444;
+  border-radius: 14px;
   padding: 25px;
-  transition: all 0.2s ease;
-  box-shadow: 0 0 10px #0008;
-  cursor: pointer;
+  position: relative;
+  box-shadow: 0 0 20px #000a;
+  transition: all 0.3s ease;
+  text-align: center;
+  overflow: hidden;
 }
 
-#shop-list li:hover {
-  transform: translateY(-6px);
-  border-color: #ffda4f;
-  box-shadow: 0 0 15px #ffda4f66;
+/* Item Image */
+#shop-list li img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 0 6px #000);
 }
 
-/* Hiệu ứng click */
-#shop-list li:active {
-  transform: scale(0.97);
+/* Item Title */
+#shop-list li .item-name {
+  font-size: 1rem;
+  margin: 10px 0;
+  color: #ffda4f;
+  text-shadow: 0 0 8px #ffda4f66;
 }
 
-/* Nút hoặc text */
+/* Item Price */
+#shop-list li .item-price {
+  font-size: 0.9rem;
+  color: #9fffea;
+  margin-bottom: 15px;
+}
+
+/* Buy Button */
 .buy-button {
-  margin-top: 10px;
   display: inline-block;
-  background: #ffbb00;
-  color: #222;
+  background: linear-gradient(90deg, #00ffa6, #00c2ff);
+  color: #111;
   font-weight: bold;
-  padding: 8px 16px;
-  border-radius: 6px;
+  padding: 10px 20px;
+  border-radius: 8px;
   text-decoration: none;
-  transition: all 0.2s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px #00ffe955;
 }
 
 .buy-button:hover {
-  background: #fff34f;
+  background: linear-gradient(90deg, #00c2ff, #00ffa6);
+  box-shadow: 0 0 20px #00ffe999, 0 0 40px #00ffe955;
+  transform: translateY(-3px);
 }
+
+/* Hover effect */
+#shop-list li:hover {
+  transform: translateY(-8px) rotateX(5deg);
+  border-color: #00ffe9;
+  box-shadow: 0 0 20px #00ffe955, inset 0 0 10px #00ffe922;
+}
+
+/* Glow swords or effect border */
+#shop-list li::before {
+  content: '';
+  position: absolute;
+  top: -2px; left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  background: linear-gradient(45deg, #00ffe9, #ff4fa3, #ffd54f);
+  z-index: -1;
+  filter: blur(8px);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+#shop-list li:hover::before {
+  opacity: 1;
+}
+
+/* Footer Style */
+footer {
+  margin-top: auto;
+  padding: 20px;
+  color: #666;
+  font-size: 0.8rem;
+}
+
