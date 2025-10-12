@@ -29,8 +29,8 @@
   }
   
   .container {
-    width: 100%;
-    margin: 0 auto;
+    max-width: 1100px;
+    margin: auto;
     padding: 30px 20px;
   }
   
@@ -215,7 +215,47 @@
   font-size: 0.95em;
   color: #333;
 }
+.server-actions {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  margin-bottom: 10px;
+}
 
+.server-actions button {
+  background: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.server-actions button:hover {
+  background: #2E7D32;
+  transform: translateY(-2px);
+}
+
+.server-tip {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+.tip-box {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  margin-left: -50vw;
+  padding: 10px 15px;
+  background: #f0f9f0;
+  border-radius: 8px;
+  margin: 10px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
 
 /* ----- Vùng chứa hành động server ----- */
 .server-actions {
@@ -236,18 +276,15 @@
 
 /* --- Tip box (hiển thị lời nhắn / mẹo nhỏ) --- */
 .tip-box {
-  background: #fafff4;
-  border: 2px solid #d3f9d8;
-  border-radius: 12px;
-  padding: 12px 20px;
-  width: 100%;
-  min-height: 90px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  box-shadow: 0 3px 10px rgba(74, 222, 128, 0.2);
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  margin-left: -50vw;
+  padding: 10px 15px;
+  background: #f0f9f0;
+  border-radius: 8px;
+  margin: 10px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .server-tip {
