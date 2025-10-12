@@ -1,0 +1,73 @@
+/* ========== SHOP PAGE STYLING ========== */
+
+body {
+  font-family: 'Minecraftia', monospace;
+  background: url('/assets/images/shop-bg.jpg') center/cover no-repeat;
+  color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin-top: 60px;
+  text-shadow: 2px 2px 0 #222;
+  color: #fff34f;
+  letter-spacing: 2px;
+}
+
+/* Danh sách item */
+#shop-list {
+  margin-top: 40px;
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  width: 80%;
+  max-width: 1000px;
+}
+
+/* Từng item */
+#shop-list li {
+  background: rgba(30, 30, 30, 0.85);
+  border: 2px solid #555;
+  border-radius: 10px;
+  padding: 25px;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 10px #0008;
+  cursor: pointer;
+}
+
+#shop-list li:hover {
+  transform: translateY(-6px);
+  border-color: #ffda4f;
+  box-shadow: 0 0 15px #ffda4f66;
+}
+
+/* Hiệu ứng click */
+#shop-list li:active {
+  transform: scale(0.97);
+}
+
+/* Nút hoặc text */
+.buy-button {
+  margin-top: 10px;
+  display: inline-block;
+  background: #ffbb00;
+  color: #222;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.buy-button:hover {
+  background: #fff34f;
+}
