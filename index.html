@@ -24,7 +24,7 @@
   <div class="hamburger" id="hamburger">&#9776;</div>
   <nav class="navbar" id="navbar">
     <a href="index.html" class="active">Trang chủ</a>
-    <a href="shop.html">Cửa hàng</a>
+    <a herf="shop.html">Cửa hàng</a>
     <a href="bank.html">Đóng góp</a>
     <a href="about.html">Giới thiệu</a>
     <a href="contact.html">Liên hệ</a>
@@ -75,19 +75,15 @@
     <div><strong>Online:</strong> <span id="playerCount">0</span> người</div>
   </div>
 
-  <div class="server-actions">
-    <div class="actions-left">
-      <button id="copyBtn">📋 Sao chép IP</button>
-      <button class="join-btn" onclick="window.location.href='minecraft://'">🚀 Tham gia ngay</button>
-    </div>
+  <section class="server-actions">
+  <div class="tip-box">
+    <p class="server-tip">Chơi cùng bạn bè để nhận thưởng EXP nhé 🌿</p>
   </div>
-      <div class="tip-box">
-    <p class="server-tip" id="serverTip">
-    Nếu server chưa mở mà cậu đang chán thì có thể ấn nút vào game chơi trước nhé!
-      </p>
-    </div>
-    </div>
 
+  <button id="copyBtn">📋 Copy IP Server</button>
+  <a href="minecraft://connect=mc.yourserver.com" class="join-btn">🎮 CHƠI NGAY</a>
+   </section>
+</div>
       <div class="extra">
         <h2>🎮 Tính năng nổi bật</h2>
         <ul>
@@ -145,9 +141,6 @@
   <script src="js/main.js"></script>
 </body>
 </html>
-
-
-
 
 
 
