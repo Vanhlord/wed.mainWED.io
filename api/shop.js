@@ -6,20 +6,21 @@ let shopData = {
 };
 
 export default function handler(req, res) {
-  if(req.method === "GET") {
-    // trả danh sách món
+  if (req.method === "GET") {
+    // Trả danh sách vật phẩm
     res.status(200).json(shopData.items);
-  } else if(req.method === "POST") {
+  } 
+  else if (req.method === "POST") {
     const { itemId, username } = req.body;
     const item = shopData.items.find(i => i.id === itemId);
-    if(!item) return res.status(400).json({ error: "Item not found" });
+    if (!item) return res.status(400).json({ error: "Item not found" });
 
-    // demo: thêm logic cộng rank, trừ tiền,... ở đây
-    console.log(`${username} bought ${item.name} for ${item.price} coins`);
+    // Logic demo: ghi log giao dịch
+    console.log(`${username} đã mua ${item.name} với giá ${item.price} vàng`);
 
-    res.status(200).json({ message: `Purchase successful: ${item.name}` });
-  } else {
+    res.status(200).json({ message: `Mua thành công: ${item.name}` });
+  } 
+  else {
     res.status(405).json({ error: "Method not allowed" });
   }
 }
-
