@@ -1,15 +1,16 @@
-// /api/sendToDiscord.js
 export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).end();
 
   const { content } = req.body;
-  const TOKEN = process.env.TOKEN;
-  const CHANNEL = process.env.CHANNEL;
+
+  // 🔒 Token và Channel ID đọc từ biến môi trường
+  const BOT_TOKEN = process.env.BOT_TOKEN;
+  const CHANNEL_ID = process.env.CHANNEL_ID;
 
   const response = await fetch(`https://discord.com/api/v10/channels/${CHANNEL_ID}/messages`, {
     method: "POST",
     headers: {
-      "Authorization": `Bot ${TOKEN}`,
+      "Authorization": `Bot ${BOT_TOKEN}`,
       "Content-Type": "application/json",
     },
     body: JSON.stringify({ content }),
