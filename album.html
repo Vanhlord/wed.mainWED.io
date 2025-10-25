@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vũ trụ Ảnh</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #000;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      position: relative;
+      width: 600px;
+      height: 600px;
+      animation: spin 120s linear infinite;
+    }
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .container img {
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+      transition: transform 0.3s;
+    }
+    .container img:hover {
+      transform: scale(1.2);
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="gallery"></div>
+
+  <script>
+    const container = document.getElementById('gallery');
+    const imageCount = 12; // số ảnh (thêm bao nhiêu thì sửa ở đây)
+    const radius = 250; // bán kính vòng tròn
+
+    for (let i = 0; i < imageCount; i++) {
+      const img = document.createElement('img');
+      img.src = `images/${i + 1}.jpg`;
+      const angle = (i / imageCount) * 2 * Math.PI;
+      const x = Math.cos(angle) * radius + 300 - 60;
+      const y = Math.sin(angle) * radius + 300 - 60;
+      img.style.left = `${x}px`;
+      img.style.top = `${y}px`;
+      container.appendChild(img);
+    }
+  </script>
+</body>
+</html>
